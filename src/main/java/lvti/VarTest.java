@@ -1,3 +1,5 @@
+package lvti;
+
 import lvti.LvtiExample;
 
 public class VarTest {
