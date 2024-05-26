@@ -35,5 +35,34 @@ public class LocalVariables {
         }
         System.out.println(partialAnother);//Will work because compiler know it will definetely execute if block as we hard coded true.
 
+        System.out.println("======================================================");
+
+        int switchInt;
+        int testInt = 5;
+        switch (testInt){
+            case 0:
+            case 1:
+            case 2:
+                switchInt = 2;
+                break;
+            case 3:
+            case 4:
+            case 5:
+                switchInt = 4;
+                break;
+            default:
+                switchInt = 47;
+        }
+        //System.out.println(switchInt);// Will not work because compiler does not know the value stored inside 'testInt' is 5 and it will get initialised.
+        //ADDING a default block in the switch statemtn works because compiler knows for sure default block will execute and it will initialise
+        System.out.println(switchInt);
+
+
+        boolean input1 = true, input2 = false;  // Line 1
+        boolean result1 = input1 = !input1; // Line 2
+        boolean result2 = input2 = input1;  // Line 3
+        boolean result3 = input1 == (result1=!input2);  // Line 4
+        System.out.println(input1+" " +input2 + " " +  result2 + " " + result3);
+
     }
 }
